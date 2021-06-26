@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76BFB73F-B8CD-4010-9BFF-26D7F8E48692}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SE1432_Group2_Lab3</RootNamespace>
+    <AssemblyName>SE1432_Group2_Lab3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CountCart.cs" />
+    <Compile Include="DAL\UserDAO.cs" />
+    <Compile Include="DTL\User.cs" />
+    <Compile Include="DTL\UserInfo.cs" />
+    <Compile Include="GUI\GUIAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIAbout.Designer.cs">
+      <DependentUpon>GUIAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\AlbumDAO.cs" />
+    <Compile Include="DAL\CartDAO.cs" />
+    <Compile Include="DAL\DAO.cs" />
+    <Compile Include="DAL\OrderDAO.cs" />
+    <Compile Include="DAL\OrderDetailDAO.cs" />
+    <Compile Include="DAL\ShoppingCartDAO.cs" />
+    <Compile Include="DTL\Album.cs" />
+    <Compile Include="DTL\Cart.cs" />
+    <Compile Include="DTL\Order.cs" />
+    <Compile Include="DTL\OrderDetail.cs" />
+    <Compile Include="GUI\GUIAddAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIAddAlbum.Designer.cs">
+      <DependentUpon>GUIAddAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIAlbum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIAlbum.Designer.cs">
+      <DependentUpon>GUIAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIAlbumDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIAlbumDetail.Designer.cs">
+      <DependentUpon>GUIAlbumDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUICart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUICart.Designer.cs">
+      <DependentUpon>GUICart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUICheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUICheckout.Designer.cs">
+      <DependentUpon>GUICheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUILogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUILogin.Designer.cs">
+      <DependentUpon>GUILogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIReport.Designer.cs">
+      <DependentUpon>GUIReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIShopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIShopping.Designer.cs">
+      <DependentUpon>GUIShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUIStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUIStore.Designer.cs">
+      <DependentUpon>GUIStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variabl.cs" />
+    <EmbeddedResource Include="GUI\GUIAbout.resx">
+      <DependentUpon>GUIAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIAddAlbum.resx">
+      <DependentUpon>GUIAddAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIAlbum.resx">
+      <DependentUpon>GUIAlbum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIAlbumDetail.resx">
+      <DependentUpon>GUIAlbumDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUICart.resx">
+      <DependentUpon>GUICart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUICheckout.resx">
+      <DependentUpon>GUICheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUILogin.resx">
+      <DependentUpon>GUILogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIReport.resx">
+      <DependentUpon>GUIReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIShopping.resx">
+      <DependentUpon>GUIShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUIStore.resx">
+      <DependentUpon>GUIStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\SE1432_Group2_Lab3.DTL.Album.datasource" />
+    <None Include="Properties\DataSources\SE1432_Group2_Lab3.DTL.Cart.datasource" />
+    <None Include="Properties\DataSources\SE1432_Group2_Lab3.DTL.Order.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\7.png" />
+    <Content Include="Images\8.png" />
+    <Content Include="Images\9.png" />
+    <Content Include="Images\e7b4b670-4436-49de-b3f2-1c5505f93baa.gif" />
+    <Content Include="Images\home-showcase.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\placeholder.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
